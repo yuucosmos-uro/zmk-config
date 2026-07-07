@@ -2,27 +2,28 @@ manifest:
   defaults:
     revision: main
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    # - name: zmkfirmware
+    #  url-base: https://github.com/zmkfirmware
     - name: cormoran
       url-base: https://github.com/cormoran
   projects:
     - name: zmk
       remote: cormoran
       revision: v0.3-branch+custom-studio-protocol+activity
-      import: app/west.yml
+      import:
+        file: app/west.yml
 
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: main
+      revision: 57738cc
 
     - name: zmk-module-battery-history
       remote: cormoran
-      revision: main
+      revision: 307755d
 
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: main
+      revision: 8f86df
 
   self:
     path: config
