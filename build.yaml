@@ -6,13 +6,13 @@
 # `artifact-name` to assign a name to distinguish build outputs from each other:
 #
 include:
-- board: seeed_xiao_ble
+- board: xiao_ble
   shield: flat_left
   snippet: studio-rpc-usb-uart
   artifact-name: flat_left_with_studio
 
-- board: seeed_xiao_ble
+- board: xiao_ble
   shield: flat_right
 
-- board: seeed_xiao_ble
+- board: xiao_ble
   shield: settings_reset
