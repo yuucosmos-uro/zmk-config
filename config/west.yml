@@ -9,21 +9,20 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+custom-studio-protocol+activity
-      import:
-        file: app/west.yml
+      revision: v0.3-branch+dya
+      import: app/west.yml
 
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: 57738cc
+      revision: zmk-v0.3.0.0
 
     - name: zmk-module-battery-history
       remote: cormoran
-      revision: 307755d
+      revision: main
 
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: 78f86df
+      revision: main
 
   self:
     path: config

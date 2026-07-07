@@ -9,7 +9,6 @@ include:
 - board: xiao_ble
   shield: flat_left
   snippet: studio-rpc-usb-uart
-  artifact-name: flat_left_with_studio
 
 - board: xiao_ble
   shield: flat_right
