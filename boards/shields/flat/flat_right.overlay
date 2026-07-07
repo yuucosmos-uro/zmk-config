@@ -22,4 +22,4 @@
 
 &vbatt {
     io-channels = <&adc 4>;
-}
+};
