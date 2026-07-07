@@ -23,7 +23,7 @@ manifest:
 
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: 8f86df
+      revision: 78f86df
 
   self:
     path: config
