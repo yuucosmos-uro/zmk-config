@@ -31,10 +31,12 @@
     diode-direction = "col2row";
     wakeup-source;
   };
-};
 
-&vbatt {
+  vbatt: vbatt {
+    compatible = "zmk,battery-voltage-divider";
+    status = "okay";
     output-ohms = <470000>;
     full-ohms = <(1000000 + 470000)>;
     mv-to-pct-thresholds = <1100 1100 1150 1180 1200 1220 1240 1260 1300 1400 1500>;
-}
+  };
+};
