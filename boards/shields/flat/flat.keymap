@@ -1,0 +1,38 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        // template {
+            //     bindings = <
+            //                     &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans
+            //         &trans      &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans      &trans
+            //         &trans      &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans      &trans
+            //         &trans                  &trans      &trans      &trans      /**/ &trans      &trans      &trans                  &trans
+            //     >;
+        // };
+
+        default_layer {
+            display-name = "Base";
+
+            // --------------------------------------------------------------------------------------------------------------------------------------------------
+            // |       |   L   |   U   |   F   |   ;   |       |   /   |   W   |   R   |   Y   |       |
+            // |   Q   |   I   |   A   |   O   |   `   |       |   K   |   T   |   N   |   S   |   P   |
+            // |   E   |   X   |   C   |   V   |   \   |       |   G   |   D   |   M   |   J   |   H   |
+            // |   Z   |       | LANG1 | ENTER | BSPC  |       |  TAB  | SPACE | LANG2 |       |   B   |
+
+
+            bindings = <
+                            &kp L       &kp U       &kp F       &kp SEMI    /**/ &kp FSLH    &kp W       &kp R       &kp Y
+                &kp Q       &kp I       &kp A       &kp O       &kp GRAVE   /**/ &kp K       &kp T       &kp N       &kp S       &kp P
+                &kp E       &kp X       &kp C       &kp V       &kp BSLH    /**/ &kp G       &kp D       &kp M       &kp J       &kp H
+                &kp Z                   &kp LANG1   &kp ENTER   &kp BSPC    /**/ &kp TAB     &kp SPACE   &kp LANG2               &kp B
+            >;
+        };
+    };
+};

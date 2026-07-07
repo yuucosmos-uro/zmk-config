@@ -1,0 +1,10 @@
+file_format: "1"
+id: flat
+name: flat
+type: shield
+requires: [seed_xiao]
+features:
+  - keys
+siblings:
+  - flat_left
+  - flat_right
