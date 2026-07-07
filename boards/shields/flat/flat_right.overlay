@@ -1,4 +1,3 @@
-#include <behaviors/battery_history_request.dtsi>
 #include "flat.dtsi"
 
 &default_transform {
