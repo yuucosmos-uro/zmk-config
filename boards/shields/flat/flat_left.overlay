@@ -1,4 +1,3 @@
-#include <input/processors.dtsi>
 #include "flat.dtsi"
 
 &kscan0 {
