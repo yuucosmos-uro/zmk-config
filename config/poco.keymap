@@ -12,7 +12,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <32 33 34 35 23 24 25 26 27 13 14 15 16 17 4 5 6 7>;
+            hold-trigger-key-positions = <36 37 38 39 26 27 28 29 30 31 14 15 16 17 18 19 4 5 6 7>;
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
         };
@@ -24,7 +24,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <28 29 30 31 18 19 20 21 22 8 9 10 11 12 0 1 2 3>;
+            hold-trigger-key-positions = <32 33 34 35 20 21 22 23 24 25 8 9 10 11 12 13 0 1 2 3>;
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
         };
@@ -37,7 +37,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <32 33 34 35 23 24 25 26 27 13 14 15 16 17 4 5 6 7>;
+            hold-trigger-key-positions = <36 37 38 39 26 27 28 29 30 31 14 15 16 17 18 19 4 5 6 7>;
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
             hold-while-undecided;
@@ -50,7 +50,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <28 29 30 31 18 19 20 21 22 8 9 10 11 12 0 1 2 3>;
+            hold-trigger-key-positions = <32 33 34 35 20 21 22 23 24 25 8 9 10 11 12 13 0 1 2 3>
             hold-trigger-on-release;
             require-prior-idle-ms = <150>;
             hold-while-undecided;
@@ -75,7 +75,7 @@
             tapping-term-ms = <200>;
         };
 
-        td0: td0 {
+        td_cd: td_cd {
             compatible = "zmk,behavior-tap-dance";
             bindings = <&kp COMMA>, <&kp KP_DOT>;
 
@@ -231,19 +231,19 @@
         combo_minus {
             timeout-ms = <60>;
             layers = <0>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
             bindings = <&kp MINUS>;
         };
         combo_comma {
             timeout-ms = <60>;
             layers = <0>;
-            key-positions = <14 15>;
+            key-positions = <16 17>;
             bindings = <&comma_excl>;
         };
         combo_dot {
             timeout-ms = <60>;
             layers = <0>;
-            key-positions = <15 16>;
+            key-positions = <17 18>;
             bindings = <&dot_qmark>;
         };
     };
@@ -253,10 +253,10 @@
 
         // template {
             //     bindings = <
-            //                     &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans
-            //         &trans      &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans      &trans
-            //         &trans      &trans      &trans      &trans      &trans      /**/ &trans      &trans      &trans      &trans      &trans
-            //         &trans                  &trans      &trans      &trans      /**/ &trans      &trans      &trans                  &trans
+            //                &trans &trans &trans &trans        /**/        &trans &trans &trans &trans
+            //         &trans &trans &trans &trans &trans &trans /**/ &trans &trans &trans &trans &trans &trans
+            //         &trans &trans &trans &trans &trans &trans /**/ &trans &trans &trans &trans &trans &trans
+            //         &trans        &trans &trans &trans        /**/        &trans &trans &trans        &trans
             //     >;
         // };
 
@@ -264,17 +264,17 @@
             display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
-            // |       |   L   |   U   |   F   |   ;   |       |  ESC  |   W   |   R   |   Y   |       |
-            // |   Q   |   I   |   A   |   O   |   `   |       |   K   |   T   |   N   |   S   |   P   |
-            // |   E   |   X   |   C   |   V   |   \   |       |   G   |   D   |   M   |   J   |   H   |
-            // |   Z   |       | LANG1 | ENTER | BSPC  |       |  TAB  | SPACE | LANG2 |       |   B   |
+            //         |   L   |   U   |   F   |   ;   |/*----------------*/|  ESC  |   W   |   R   |   Y   |
+            // |   Q   |   I   |   A   |   O   |   `   | C+A+D |/**/| PSCRN |   K   |   T   |   N   |   S   |   P   |
+            // |   E   |   X   |   C   |   V   |   \   | td_cp |/**/|       |   G   |   D   |   M   |   J   |   H   |
+            // |   Z   |/*---*/|  MO4  | ENTER | BSPC  |/*----------------*/|  TAB  | SPACE | LANG  |/*---*/|   B   |
 
 
             bindings = <
-                                 &kp L          &kp U          &kp F          &kp SEMI  /**/ &kp ESC     &kp W          &kp R          &kp Y
-                &kp Q            &hmr_l LALT I  &hmr_l LCTRL A &hmr_l LSHFT O &kp GRAVE /**/ &kp K       &hmr_r RSHFT T &hmr_r RCTRL N &hmr_r RALT S  &kp P
-                &hmr_l LGUI E  &kp X          &kp C          &kp V          &kp BSLH    /**/ &kp G       &kp D          &kp M          &kp J          &hmr_r RGUI H
-                &kp Z                           &mo 4          &lt 1 ENTER    &bspc_del /**/ &lt 3 TAB   &lt 2 SPACE    &td_ek                        &kp B
+                              &kp L         &kp U          &kp F          &kp SEMI                  /**/           &kp ESC   &kp W          &kp R          &kp Y
+                &kp Q         &hmr_l LALT I &hmr_l LCTRL A &hmr_l LSHFT O &kp GRAVE &kp LC(LA(DEL)) /**/ &kp PSCRN &kp K     &hmr_r RSHFT T &hmr_r RCTRL N &hmr_r RALT S &kp P
+                &hmr_l LGUI E &kp X         &kp C          &kp V          &kp BSLH  &td_cp          /**/ &none     &kp G     &kp D          &kp M          &kp J         &hmr_r RGUI H
+                &kp Z                       &mo 4          &lt 1 ENTER    &bspc_del                 /**/           &lt 3 TAB &lt 2 SPACE    &td_ek                       &kp B
             >;
         };
 
@@ -282,16 +282,16 @@
             display-name = "Number";
 
             // -----------------------------------------------------------------------------------------
-            // |       |   %   |   -   |   /   |       |       | Num   |   7   |   8   |   9   |       |
-            // |       |   =   |   +   |   *   |       |       |       |   4   |   5   |   6   |       |
-            // | LGUI  |       |       |       |       |       | Copy  |   1   |   2   |   3   |       |
-            // |       |       |       |       |       |       | , / . |   0   |       |       |       |
+            //         |   %   |   -   |   /   |       |/*----------------*/| Num   |   7   |   8   |   9   |
+            // |       |   =   |   +   |   *   |       |       |/**/|       |   4   |   5   |   6   |       |       |
+            // | LGUI  |       |       |       |       |       |/**/| Copy  |   1   |   2   |   3   |       |       |
+            // |       |/*---*/|       |       |       |/*----------------*/| , / . |   0   |       |/*---*/|       |
 
             bindings = <
-                            &kp AMPS          &kp KP_MINUS         &kp KP_DIVIDE            &none       /**/ &kp KP_NUM  &kp KP_N7   &kp KP_N8   &kp KP_N9
-                &none       &hmr_l LALT EQUAL &hmr_l LCTRL KP_PLUS &hmr_l LSHFT KP_ASTERISK &none       /**/ &none       &kp KP_N4   &kp KP_N5   &kp KP_N6   &none
-                &kp LGUI    &kp X             &none                &none                    &none       /**/ &td_cp      &kp KP_N1   &kp KP_N2   &kp KP_N3   &none
-                &none                         &none                &none                    &none       /**/ &td0        &kp KP_N0   &none                   &none
+                         &kp AMPS          &kp KP_MINUS         &kp KP_DIVIDE            &none       /**/       &kp KP_NUM &kp KP_N7 &kp KP_N8 &kp KP_N9
+                &none    &hmr_l LALT EQUAL &hmr_l LCTRL KP_PLUS &hmr_l LSHFT KP_ASTERISK &none &none /**/ &none &none      &kp KP_N4 &kp KP_N5 &kp KP_N6 &none
+                &kp LGUI &none             &none                &none                    &none &none /**/ &none &td_cp     &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
+                &none                      &none                &none                    &none       /**/       &td_cd     &kp KP_N0 &none               &none
             >;
         };
 
@@ -299,16 +299,16 @@
             display-name = "Navigation";
 
             // -----------------------------------------------------------------------------------------
-            // |       | P-Up  |  Up   | Home  |       |       |       |       |       |       |       |
-            // |       | Left  | Down  | Right |       |       |       | LSFT  | LCTRL | LAlt  |       |
-            // | LGUI  | P-Down|       |  End  |       |       |       |       |       |       | LGUT  |
-            // |       |       |       | CMENU |       |       |       |       |       |       |       |
+            //         | P-Up  |  Up   | Home  |       |/*----------------*/|       |       |       |       |
+            // |       | Left  | Down  | Right |       |       |/**/|       |       | LSHFT | LCTRL | LAlt  |       |
+            // | LGUI  | P-Down|       |  End  |       |       |/**/|       |       |       |       |       | LGUT  |
+            // |       |/*---*/|       | CMENU |       |/*----------------*/|       |       |       |/*---*/|       |
 
             bindings = <
-                            &kp PG_UP   &kp UP      &kp HOME    &none   /**/ &none       &none       &none       &none
-                &none       &kp LEFT    &kp DOWN    &kp RIGHT   &none   /**/ &none       &kp LSFT    &kp LCTRL   &kp LALT    &none
-                &kp LGUI    &kp PG_DN   &none       &kp END     &none   /**/ &none       &none       &none       &none       &kp LGUI
-                &none                   &none       &kp K_APP   &none   /**/ &none       &none       &none                   &none
+                       &kp PG_UP &kp UP   &kp HOME  &none       /**/       &none &none     &none     &none
+                &none  &kp LEFT  &kp DOWN &kp RIGHT &none &none /**/ &none &none &kp LSHFT &kp LCTRL &kp LALT &none
+                &trans &kp PG_DN &none    &kp END   &none &none /**/ &none &none &none     &none     &none    &kp LGUI
+                &none            &none    &kp K_APP &none       /**/       &none &none     &none              &none
             >;
         };
 
@@ -316,16 +316,16 @@
             display-name = "Function";
 
             // -----------------------------------------------------------------------------------------
-            // |       |  F2   |  F3   |  F4   |       |       |       |       |       |       |       |
-            // |  F1   |  F6   |  F7   |  F8   |       |       |       | LSFT  | LCTRL | LAlt  |       |
-            // |  F5   |  F10  |  F11  |  F12  |       |       |       |       |       |       | LGUT  |
-            // |  F9   |       |       | CLCK  | SLCK  |       |       |       |       |       |       |
+            //         |  F2   |  F3   |  F4   |       |/*----------------*/|       |       |       |       |
+            // |  F1   |  F6   |  F7   |  F8   |       |       |/**/|       |       | LSHFT | LCTRL | LAlt  |       |
+            // |  F5   |  F10  |  F11  |  F12  |       |       |/**/|       |       |       |       |       | LGUT  |
+            // |  F9   |/*---*/|       | CLCK  | SLCK  |/*----------------*/|       |       |       |/*---*/|       |
 
             bindings = <
-                            &kp F2      &kp F3      &kp F4      &none   /**/ &none       &none       &none       &none
-                &kp F1      &kp F6      &kp F7      &kp F8      &none   /**/ &none       &trans      &trans      &trans      &none
-                &kp F5      &kp F10     &kp F11     &kp F12     &none   /**/ &none       &none       &none       &none       &trans
-                &kp F9                  &none       &none       &none   /**/ &none       &none       &none                   &none
+                       &kp F2  &kp F3  &kp F4   &none          /**/       &none &none  &none  &none
+                &kp F1 &kp F6  &kp F7  &kp F8   &none    &none /**/ &none &none &trans &trans &trans &none
+                &kp F5 &kp F10 &kp F11 &kp F12  &none    &none /**/ &none &none &none  &none  &none  &trans
+                &kp F9         &none   &kp CLCK &kp SLCK       /**/       &none &none  &none         &none
             >;
         };
 
@@ -333,16 +333,16 @@
             display-name = "Mod & DEVICE";
 
             // -----------------------------------------------------------------------------------------
-            // |       |       | C+A+D |       |       |       | BT CA | BT C  |       |       |       |
-            // |       | LALT  | LCTRL | LSFT  |       |       | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |
-            // | LGUI  |       |       |       |       |       |       |       |       |       |       |
-            // |       |       |       | Boot  | Reset |       | Reset | Boot  |       |       |       |
+            //         |       |       |       |       |/*----------------*/| BT CA | BT C  |       |       |
+            // |       |       |       |       |       |       |/**/|       | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |
+            // |       |       |       |       |       |       |/**/|       |       |       |       |       |       |
+            // |       |/*---*/|       | Boot  | Reset |/*----------------*/| Reset | Boot  |       |       |/*---*/|
 
             bindings = <
-                            &none       &kp LC(LA(DEL)) &none       &none      /**/ &bt BT_CLR_ALL &bt BT_CLR   &none        &none
-                &none       &kp LALT    &kp LCTRL       &kp LSFT    &none      /**/ &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
-                &kp LGUI    &none       &none           &none       &none      /**/ &none          &none        &none        &none        &none
-                &none                   &none           &bootloader &sys_reset /**/ &sys_reset     &bootloader  &none                     &none
+                      &none &none &none       &none            /**/ &bt BT_CLR_ALL &bt BT_CLR   &none        &none
+                &none &none &none &none       &none      &none /**/ &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
+                &none &none &none &none       &none      &none /**/ &none          &none        &none        &none        &none
+                &none       &none &bootloader &sys_reset       /**/ &sys_reset     &bootloader  &none                     &none
             >;
         };
     };

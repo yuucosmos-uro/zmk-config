@@ -1,0 +1,5 @@
+config SHIELD_POCO_LEFT
+    def_bool $(shields_list_contains,POCO_left)
+
+config SHIELD_POCO_RIGHT
+    def_bool $(shields_list_contains,POCO_right)

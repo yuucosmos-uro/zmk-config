@@ -7,10 +7,10 @@
 #
 include:
 - board: xiao_ble
-  shield: flat_left
+  shield: poco_left
 
 - board: xiao_ble
-  shield: flat_right
+  shield: poco_right
 
 - board: xiao_ble
   shield: settings_reset

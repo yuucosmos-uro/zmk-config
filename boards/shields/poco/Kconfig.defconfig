@@ -1,14 +1,14 @@
-if SHIELD_FLAT_LEFT
+if SHIELD_POCO_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "flat"
+    default "poco"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_FLAT_LEFT || SHIELD_FLAT_RIGHT
+if SHIELD_POCO_LEFT || SHIELD_POCO_RIGHT
 
 config ZMK_SPLIT
     default y
